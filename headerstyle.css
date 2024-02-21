@@ -1,0 +1,44 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.homeLogo {
+    flex: 1;
+}
+.homeLogo img {
+    width: 80px;
+    height: auto;
+    margin-left: 25px;
+    margin-top: 30px;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    display: flex;
+    font-size: 40px;
+    margin-top: 25px;
+    margin-right: 30px;
+    color: #502EBC;
+}
+.material-symbols-outlined:hover {
+    opacity: 0.6;
+}
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+    .homeLogo {
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .material-symbols-outlined {
+        align-items: center;
+        margin: 0 auto;
+    }
+}
