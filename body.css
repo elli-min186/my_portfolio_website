@@ -72,6 +72,7 @@
     .HomeInfo {
         grid-template-columns: auto;
         margin-left: 20px;
+        margin-right: 20px;
     }
     .grid-item {
         grid-column: auto;
