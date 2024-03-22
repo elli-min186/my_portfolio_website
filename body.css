@@ -1,66 +1,77 @@
 :root {
     --primaryColor: #502EBC;
     --secondaryColor: #2a107d;
+    --green: #556B2F;
+    --darkPurple: #3F0F6F;
 }
 * {
-    font-family: "Play", sans-serif;
-    font-style: normal;
+    font-family: "Times New Roman", Times, serif;
+}
+section {
+    display: none;
+}
+section.active {
+    display: block;
+}
+.hidden {
+    display: none;
 }
 .HomeInfo {
     display: grid;
-    margin-top: 7%;
+    max-width: 100%;
+    margin-top: 10%;
     margin-left: 100px;
     margin-right: 100px;
     gap: 5px;
 }
 .grid-item {
     align-items: center;
-    font-family: "Times New Roman", Times, serif;
     padding: 5px;
+    display: relative;
 }
 .name {
-    grid-column: 1 / span 2;
+    grid-column: 2 / span 2;
     grid-row: 1;
-    margin: 0;
+    margin-top: 10%;
+    margin-left: 60px;
     text-align: left;
-    font-size: 30px;
-    color: var(--primaryColor);
+    color: var(--darkPurple);
 }
 .name h1 {
-    margin-top: 0;
+    margin: 0;
+    font-size: 80px;
+    font-weight: bold;
+}
+.name h2 {
+    margin: 0;
+    font-size: 25px;
 }
 .name p {
-    color: var(--secondaryColor);
     margin: 0;
     font-style: italic;
+    font-size: 30px;
+}
+.nameColor {
+    color: var(--green);
 }
 .image {
-    grid-column: 3;
+    grid-column: 1;
     grid-row: 1 / span 2;
     text-align: center;
     margin: auto;
 }
 .image img {
-    width: 350px;
-    border-radius: 50%;
+    width: 500px;
     transition: .5s;
 }
 .image img:hover {
     transform: scale(1.2);
 }
-.summary {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-    
-}
-.summary p {
-    color: var(--secondaryColor);
-    font-size: 17px;
-    margin-right: 40px;
-    margin-bottom: 0;
-}
 .contactInfo {
     display: flex;
+    grid-row: 2;
+    grid-column: 2 / span 2;
+    margin-left: 60px;
 }
 .contactInfo > div {
     padding: 10px;
@@ -73,26 +84,38 @@
 .contactInfo img:hover {
     opacity: 0.6;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     .HomeInfo {
         grid-template-columns: auto;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 0 auto;
+        margin-top: 70px;
+        padding: 0 20px;
     }
+
     .grid-item {
         grid-column: auto;
         grid-row: auto;
+        padding: 40px;
+        margin-top: 40px;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
     }
+
     .name, .contactInfo, .image, .summary {
-        width: 100%;
+        max-width: 100%;
+        align-items: center;
     }
+
     .name {
         text-align: center;
     }
+
     .contactInfo {
         justify-content: center;
     }
-    .summary p {
-        margin-right: 20px;
+
+    .image img {
+        max-width: 100%;
     }
 }
