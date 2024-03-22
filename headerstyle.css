@@ -30,7 +30,6 @@ nav {
     display: flex;
     flex-direction: row;
     margin-right: 90px;
-    padding-left: 50px;
     z-index: 980;
     opacity: 0;
     text-decoration: none;
