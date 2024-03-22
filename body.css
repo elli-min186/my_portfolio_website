@@ -7,6 +7,9 @@
 * {
     font-family: "Times New Roman", Times, serif;
 }
+body {
+    max-width: 100%;
+}
 section {
     display: none;
 }
@@ -28,6 +31,7 @@ section.active {
     align-items: center;
     padding: 5px;
     display: relative;
+    max-width: 100%;
 }
 .name {
     grid-column: 2 / span 2;
@@ -63,6 +67,7 @@ section.active {
 .image img {
     width: 500px;
     transition: .5s;
+    align-items: center;
 }
 .image img:hover {
     transform: scale(1.1);
@@ -85,20 +90,20 @@ section.active {
     opacity: 0.6;
 }
 footer {
-    position: absolute;
-    text-align: center;
-    bottom: 0;
+    position: fixed;
     left: 0;
     right: 0;
+    bottom: 0;
+    text-align: center;
     font-size: 15px;
     color: gray;
 }
 @media only screen and (max-width: 1024px) {
     .HomeInfo {
         grid-template-columns: auto;
-        margin: 0 auto;
-        margin-top: 70px;
-        padding: 0 20px;
+        margin: 70px auto 0;
+        padding: 20px;
+        max-width: 100%;
     }
 
     .grid-item {
@@ -107,24 +112,66 @@ footer {
         padding: 40px;
         margin-top: 40px;
         max-width: 100%;
-        justify-content: center;
-        align-items: center;
     }
 
-    .name, .contactInfo, .image, .summary {
-        max-width: 100%;
-        align-items: center;
+    .name, .contactInfo, .image {
+        margin-left: 0;
     }
 
     .name {
         text-align: center;
     }
 
-    .contactInfo {
-        justify-content: center;
+    .name h1 {
+        font-size: 60px;
     }
 
-    .image img {
+    .name h2 {
+        font-size: 20px;
+    }
+
+    .name p {
+        font-size: 15px;
+    }
+
+    .contactInfo {
+        margin-top: 0;
+        padding-top: 0;
+        justify-content: center;
+        padding-bottom: 0;
+    }
+
+    .image {
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        display: flex;
         max-width: 100%;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .grid-item {
+        position: relative;
+        max-width: 100%;
+    }
+    .HomeInfo {
+        margin-top: 0;
+    }
+    .name {
+        padding-bottom: 0;
+        margin-top: 0;
+    }
+    .image, .contactInfo {
+        margin: 0;
+    }
+    .image img {
+        width: 100%;
+    }
+    footer {
+        position: relative;
     }
 }

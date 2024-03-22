@@ -1,11 +1,13 @@
 :root {
     --primaryColor: #502EBC;
     --secondaryColor: #2a107d;
+    --green: #556B2F;
+    --darkPurple: #3F0F6F;
 }
 nav {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    max-width: 100%;
 }
 /* .sticky {
     position: fixed;
@@ -126,15 +128,41 @@ nav {
     transform: rotate(-45deg);
 }
 
-@media only screen and (max-width: 768px) {
-    header {
+@media only screen and (max-width: 700px) {
+    .nav-container {
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+        max-width: 100%;
         flex-direction: column;
-        padding: 10px;
-        align-items: center;
+        align-items: center; 
+        height: auto; 
+        background-color: rgba(255, 255, 255, 0.5);
     }
-    .homeLogo {
-        align-items: center;
-        margin-bottom: 10px;
+    .menu-items {
+        position: relative;
+        max-width: 100%; 
+        margin-right: 0; 
+        margin-top: 10px; 
+        opacity: 1; 
+        flex-direction: column; 
+        text-align: center; 
     }
-    
+    .menu-items {
+        opacity: 1;
+     }
+    .nav-container .hamburger-lines, .checkbox {
+        visibility: hidden;
+    }
+    .menu-items li {
+        padding: 10px 0; 
+        border-bottom: none; 
+    }
+    .homeLogo img {
+        position: relative;
+        margin-left: 0; 
+        margin-top: 0; 
+        margin-bottom: 10px; 
+    }
 }
