@@ -1,7 +1,7 @@
 # Personal Portfolio Website
 Welcome to my personal portfolio website! This project showcases my skills and projects in a visually appealing and user-friendly manner. Below are some key features and instructions to help you navigate and understand the components of this website.
 
-*__Website still under construction!__*
+# *__Website still under construction!__*
 
 ## Introduction
 This is a personal portfolio website designed and developed with a focus on advanced CSS techniques, responsiveness, UI/UX concepts, and a visually appealing design. The website incorporates animations, keyframes, a navbar with transitions, a gradient live background, and a hamburger menu bar for enhanced user experience.
