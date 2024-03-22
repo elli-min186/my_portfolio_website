@@ -9,6 +9,7 @@ This is a personal portfolio website designed and developed with a focus on adva
 ## Technologies Used
 - HTML5
 - CSS3 (Advanced techniques, Animations, Keyframes, Transitions)
+- JavaScript (Switching between different pages)
 - Adobe Illustrator (for designing the logo and favicon)
 
 ## Key Features
