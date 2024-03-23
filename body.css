@@ -175,3 +175,11 @@ footer {
         position: relative;
     }
 }
+@media only screen and (max-height: 629px) {
+    .HomeInfo {
+        margin-top: 20px;
+    }
+    footer {
+        position: relative;
+    }
+}

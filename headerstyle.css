@@ -166,3 +166,8 @@ nav {
         margin-bottom: 10px; 
     }
 }
+@media only screen and (max-height: 629px) {
+    .nav-container {
+        margin-bottom: 0;
+    }
+}
