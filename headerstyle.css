@@ -150,10 +150,8 @@ nav {
         opacity: 1; 
         flex-direction: column; 
         text-align: center; 
+        visibility: visible;
     }
-    .menu-items {
-        opacity: 1;
-     }
     .nav-container .hamburger-lines, .checkbox {
         visibility: hidden;
     }

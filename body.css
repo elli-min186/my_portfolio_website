@@ -43,7 +43,7 @@ section.active {
 }
 .name h1 {
     margin: 0;
-    font-size: 100px;
+    font-size: 80px;
     font-weight: bold;
 }
 .name h2 {
@@ -56,7 +56,21 @@ section.active {
     font-size: 30px;
 }
 .nameColor {
-    color: var(--green);
+    color: #FDF8EC;
+    background-color: rgba(85, 107, 47, .9);
+    overflow: hidden;
+    display: block;
+    animation: openclose 1.3s ease-in-out infinite;
+}
+@keyframes openclose {
+    0% {
+      width: 0;
+      padding-left: 10px;
+    }
+    100% {
+      width: 170px;
+      padding-left: 10px;
+    }
 }
 .image {
     grid-column: 1;
@@ -124,6 +138,12 @@ footer {
 
     .name h1 {
         font-size: 60px;
+        text-align: center;
+    }
+
+    .nameColor {
+        text-align: center;
+        animation: none;
     }
 
     .name h2 {
@@ -177,9 +197,23 @@ footer {
 }
 @media only screen and (max-height: 629px) {
     .HomeInfo {
-        margin-top: 20px;
+        margin-top: 10%;
+    }
+    .image img {
+        width: 80%;
+    }
+    .name h1 {
+        font-size: 5em;
+    }
+    .name p {
+        font-size: 1.5em;
     }
     footer {
         position: relative;
     }
 }
+/* @media only screen and (min-height: 629px ) {
+    footer {
+        position: absolute;
+    }
+} */
