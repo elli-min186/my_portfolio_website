@@ -23,6 +23,7 @@ nav {
     margin-bottom: 50px;
 }
 .menu-items {
+    visibility: hidden;
     list-style: none;
     justify-content: flex-end;
     position: absolute; 
@@ -114,6 +115,7 @@ nav {
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
     opacity: 0.9;
     width: 100%;
+    visibility: visible;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
