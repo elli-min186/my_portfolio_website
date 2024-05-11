@@ -9,6 +9,14 @@
 
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
@@ -19,7 +27,6 @@
     <link rel="stylesheet" href="body.css">
     <link rel="stylesheet" href="aboutme.css">
     <script src="pageSelector.js"></script>
-
 </head>
 <body>
     <nav>
@@ -80,7 +87,24 @@
         <section id="aboutme">
             <div class="flex-container">
                 <div class="text">
-                    <h1>About Me</h1>
+                    <div class="grid-item aboutmeTitle">
+                        <h1>About Me</h1>
+                    </div>
+                    <div class="grid-item aboutmeBody">
+                        <p>Hello! I'm Elli, a Computer Science student at TMU (Toronto Metropolitan University) with a passion for
+                            <b>web development</b> and <b>software engineering</b>. Beyond the realm of code, I enjoy exploring new languages, 
+                            immersing myself in diverse cultures, and indulging in a mix of music, movies, and travel adventures.
+                        </p>
+                        <p>
+                            My journey in Computer Science has equipped me with a versatile skill set. Here are some of the technologies I'm proficient in:
+                            <ul>
+                                <li><b>Programming Languages</b>: Java, Python, HTML, CSS, JavaScript, Rust, C, PHP, MySQL</li>
+                                <li><b>Operating Systems & Tools</b>: Linux/Unix, bash scripting, Visual Studio Code</li>
+                                <li><b>Design & Prototyping</b>: Figma</li>
+                                <li><b>Productivity Tools</b>: Google Suite, Adobe Creative Suite</li>
+                            </ul>
+                        </p>
+                    </div>
                 </div>
                 <div class="svgs">
                     <div class="flakeObject">
@@ -96,20 +120,19 @@
                         </svg>
                     </div>
                     
-                    <div class="pictureObject" width="400" height="500">
-                        <svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="pictureObject" width="300" height="400">
+                        <svg width="300" height="400" viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <clipPath id="img1">
-                                    <path d="M400 250
-                                            C400 194.7715 375.228 30 200 30
-                                            C24.772 30 0 194.7715 0 250
-                                            V500
-                                            H400
+                                    <path d="M300 169
+                                            C300 133.662 281.421 30 150 30
+                                            C18.5786 30 0 133.662 0 169
+                                            V400
+                                            H300
                                             Z"/>
-        
                                 </clipPath>
-                                </defs>
-                            <image width="100%" xlink:href="images/Image1.jpg" clip-path="url(#img1)" x="0" y="20"/>
+                            </defs>
+                            <image width="100%" xlink:href="images/Image1.jpg" clip-path="url(#img1)" x="0" y="15"/>
                         </svg>
                     </div>
                 </div>

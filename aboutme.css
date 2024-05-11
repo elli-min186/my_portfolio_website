@@ -3,22 +3,50 @@
     --secondaryColor: #2a107d;
     --green: #556B2F;
     --darkPurple: #3F0F6F;
+    --gold: #FFD700;
 }
 .flex-container {
-    margin-top: 150px;
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 .text {
-    flex: 50%;
+    flex: 60%;
+    display: grid;
     margin-left: 20px;
+}
+.aboutmeTitle h1 {
+    font-size: 100px;
+    color: var(--darkPurple);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 1);
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.aboutmeTitle, .aboutmeBody {
+    margin: 0 0 0 50px;
+}
+.aboutmeBody {
+    margin: 0 50px 0 50px;
+    font-size: 18px;
+    color: var(--darkPurple);
+}
+.aboutmeBody p, .aboutmeBody li{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.aboutmeBody p b, .aboutmeBody li b {
+    font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 .svgs {
     margin-top: 10%;
     display: flex;
-    flex: 50%;
+    flex: 40%;
 }
 .flakeObject {
     animation: rotateObject 5s linear infinite;
@@ -31,8 +59,8 @@
     fill: var(--secondaryColor);
 }
 .pictureObject {
-    position: fixed;
-    left: 65%;
+    position: absolute;
+    left: 70%;
     top: 20%;
 }
 .pictureObject svg path {

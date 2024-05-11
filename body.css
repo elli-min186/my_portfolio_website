@@ -144,6 +144,7 @@ footer {
     .nameColor {
         text-align: center;
         animation: none;
+        border-radius: 20px;
     }
 
     .name h2 {
