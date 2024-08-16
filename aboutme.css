@@ -4,113 +4,220 @@
     --green: #556B2F;
     --darkPurple: #3F0F6F;
     --gold: #FFD700;
+    --s: 10px;
 }
+
 .flex-container {
     margin-top: 100px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    width: 100%;
+    margin-left: 30px;
 }
-.text {
-    flex: 60%;
+
+.aboutmeText, .coursesText {
+    flex: 1;
     display: grid;
     margin-left: 20px;
+    max-width: 600px; /* Added for better scaling on larger screens */
 }
-.aboutmeTitle h1 {
-    font-size: 100px;
+
+.Title h1 {
+    font-size: 4rem; /* Responsive scaling */
     color: var(--darkPurple);
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 1);
     font-family: "Alice", serif;
     font-weight: 400;
     font-style: normal;
+    margin: 0; /* Remove margin for better control */
 }
-.aboutmeTitle, .aboutmeBody {
-    margin: 0 0 0 50px;
+
+.Title, .Body {
+    margin: 10px 50px; /* Consistent margin */
 }
-.aboutmeBody {
-    margin: 0 50px 0 50px;
+
+.Title {
+    padding: 0;
+}
+
+.Body {
     font-size: 18px;
     color: var(--darkPurple);
 }
-.aboutmeBody p, .aboutmeBody li{
+
+.Body p, .Body li {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-style: normal;
 }
-.aboutmeBody p b, .aboutmeBody li b {
-    font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+
+.Body p b, .Body li b {
+    font-weight: 700;
 }
-.svgs {
-    margin-top: 10%;
-    display: flex;
-    flex: 40%;
-}
-.flakeObject {
+
+.flakeObject, .flowerObject {
     animation: rotateObject 5s linear infinite;
     position: absolute;
-    left: 80%;
-    top: 18%;
+    transform: translateX(-50%);
+    z-index: 10;
     opacity: 0.9;
 }
-.flakeObject svg path {
+
+.flakeObject {
+    top: 7%;
+    left: 67%;
+}
+
+.flowerObject {
+    top: 75%;
+    left: 47%
+}
+
+.flakeObject svg g path, .flowerObject svg g path {
     fill: var(--secondaryColor);
 }
+
 .pictureObject {
-    position: absolute;
-    left: 70%;
-    top: 20%;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
 }
-.pictureObject svg path {
-    fill: var(--green);
+
+.pictureObject img {
+    padding: var(--s);
+    border: calc(2 * var(--s)) solid transparent; /* Set to transparent for seamless frame */
+    outline: 1px solid black;
+    outline-offset: calc(-1 * var(--s));
+    background: conic-gradient(from 90deg at 1px 1px, #0000 25%, black 0);
+    width: 100%; /* Make it responsive */
+    max-width: 400px; /* Control maximum size */
+    height: auto; /* Ensure proper aspect ratio */
 }
+
 @keyframes rotateObject {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
-@media only screen and (max-width: 1280px) {
+
+@media only screen and (max-width: 480px) {
+    .Title h1 {
+        font-size: 2rem;
+    }
+
+    .Body {
+        font-size: 14px;
+    }
+
     .pictureObject {
-        left: 70%;
-        top: 15%;
+        max-width: 70%;
     }
-    .pictureObject svg, .flakeObject svg {
-        width: 80%;
-    }
+
     .flakeObject {
-        left: 77%;
-        top: 17%;
+        top: 25%;
     }
-    .svgs {
-        overflow: hidden;
-    }
-}
-@media only screen and (max-height: 629px) {
-    .pictureObject {
-        width: 80%;
+
+    .flowerObject {
+        top: 140%;
+        left: 0%;
     }
 }
+
 @media only screen and (max-width: 700px) {
-    .flakeObject {
-        left: 55%;
-        top: 35%;
-        transform-origin: center;
-    }
-    .pictureObject {
-        width: 80%;
-        position: relative;
-        top: 10%;
-        left: 23%;
-    }
     .flex-container {
         flex-direction: column;
-        margin-top: 0;
+        margin-top: 50px;
+        align-items: center;
     }
-    .text {
-        order: 2;
+
+    .aboutmeText, .coursesText {
+        margin-left: 0;
+        text-align: center;
+        order: 2; /* Ensure text follows image */
     }
-    .svgs {
-        order: 1;
+
+    .Title h1 {
+        font-size: 2.5rem;
+    }
+
+    .Body {
+        font-size: 16px;
+    }
+    .pictureObject {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .flakeObject {
+        left: 55%;
+        top: 20%;
+    }
+
+    .flowerObject {
+        left: 0%;
+        top: 160%;
+    }
+}
+
+@media only screen and (max-width: 749px){
+    .flakeObject {
+        left: 80%;
+        top: 50%;
+    }
+
+    .flowerObject {
+        left: 15%;
+        top: 245%;
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 762px) {
+    .flakeObject {
+        left: 80%;
+        top: 50%;
+    }
+
+    .flowerObject {
+        left: 80%;
+        top: 225%;
+    }
+}
+
+@media only screen and (min-width: 763px) and (max-width: 790px) {
+    .flakeObject {
+        left: 90%;
+        top: 90%;
+    }
+
+    .flowerObject {
+        left: 100%;
+        top: 225%;
+    }
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 1024px) {
+    .pictureObject {
+        max-width: 400px;
+    }
+
+    .flakeObject {
+        left: 55%;
+        top: 20%;
+    }
+
+    .flowerObject {
+        left: 0%;
+        top: 160%;
+    }
+}
+
+/* Larger screens */
+@media (min-width: 1024px) {
+    .pictureObject {
+        max-width: 600px;
     }
 }

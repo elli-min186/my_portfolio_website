@@ -3,6 +3,7 @@
     --secondaryColor: #2a107d;
     --green: #556B2F;
     --darkPurple: #3F0F6F;
+    --lightPurple: #E6E6FA;
 }
 * {
     font-family: "Times New Roman", Times, serif;
@@ -56,7 +57,7 @@ section.active {
     font-size: 30px;
 }
 .nameColor {
-    color: #FDF8EC;
+    color: var(--lightPurple);
     background-color: rgba(85, 107, 47, .9);
     overflow: hidden;
     display: block;
