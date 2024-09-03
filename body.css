@@ -58,12 +58,13 @@ section.active {
     font-style: italic;
     font-size: 30px;
 }
+
 .nameColor {
     color: var(--lightPurple);
     background-color: rgba(85, 107, 47, .9);
     overflow: hidden;
     display: block;
-    animation: openclose 1.3s ease-in-out infinite;
+    animation: openclose 1.3s ease-in-out forwards;
 }
 @keyframes openclose {
     0% {

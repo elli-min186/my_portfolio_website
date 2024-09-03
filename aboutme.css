@@ -57,26 +57,11 @@
     font-weight: 700;
 }
 
-.flakeObject, .flowerObject, .flowerTwoObject {
+.flowerObject, .flowerTwoObject {
     animation: rotateObject 5s linear infinite;
     position: absolute;
     z-index: 10;
     opacity: 0.1;
-}
-
-.flakeObject {
-    top: 0;
-    left: 65%;
-}
-
-.flowerObject {
-    top: 0;
-    left: 65%;
-}
-
-.flowerTwoObject {
-    top: 0;
-    left: 65%;
 }
 
 .flakeObject svg g path, .flowerObject svg g path, .flowerTwoObject svg g path {
@@ -84,8 +69,8 @@
 }
 
 .pictureObject {
-    width: 100vw;
-    max-width: 400px;
+    width: 50vw;
+    max-width: 350px;
     justify-content: center;
     margin: 0 20px;
 }
@@ -129,12 +114,12 @@
         order: 1;
     }
 
-    .aboutmeText, .coursesText, .extraText {
+    .aboutmeText, .coursesText{
         margin: 0;
         order: 2;
     }
 
-    .flakeObject, .flowerObject, .flowerTwoObject {
+    .flowerObject, .flowerTwoObject {
         visibility: hidden;
         display: none;
     }
@@ -148,7 +133,7 @@
         align-items: center;
     }
 
-    .aboutmeText, .coursesText, .extraText{
+    .aboutmeText, .coursesText{
         margin-left: 0;
         text-align: center;
         order: 2; /* Ensure text follows image */
@@ -166,9 +151,8 @@
         margin: 0 auto;
     }
 
-    .flakeObject, .flowerObject, .flowerTwoObject {
+    .flowerObject, .flowerTwoObject {
         display: none;
-        overflow: hidden;
     }
 }
 
@@ -178,19 +162,14 @@
         justify-content: center;
     }
 
-    .flakeObject {
-        left: 65%;
+    .flowerTwoObject {
+        left: 70%;
         top: 0;
     }
 
     .flowerObject {
-        top: 70%;
-        left: 65%;
-    }
-
-    .flowerTwoObject {
-        left: 65%;
-        top: 0;
+        top: 65%;
+        left: 70%;
     }
 }
 
@@ -200,7 +179,7 @@
         justify-content: center;
     }
 
-    .flakeObject {
+    .flowerTwoObject {
         left: 75%;
         top: 0;
     }
@@ -208,11 +187,6 @@
     .flowerObject {
         left: 75%;
         top: 65%;
-    }
-
-    .flowerTwoObject {
-        left: 75%;
-        top: 0;
     }
 }
 
