@@ -12,18 +12,16 @@
     margin-bottom: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
     width: 100%;
     margin-left: 30px;
 }
 
-.aboutmeText, .coursesText {
+.aboutmeText, .coursesText, .extraText {
     flex: 1;
     display: grid;
     margin-left: 20px;
-    max-width: 600px; /* Added for better scaling on larger screens */
 }
 
 .Title h1 {
@@ -58,31 +56,36 @@
     font-weight: 700;
 }
 
-.flakeObject, .flowerObject {
+.flakeObject, .flowerObject, .flowerTwoObject {
     animation: rotateObject 5s linear infinite;
     position: absolute;
     transform: translateX(-50%);
     z-index: 10;
-    opacity: 0.9;
+    opacity: 0.1;
 }
 
 .flakeObject {
-    top: 7%;
-    left: 67%;
+    top: 0;
+    left: 85%;
 }
 
 .flowerObject {
-    top: 75%;
-    left: 47%
+    top: 130%;
+    left: 65%;
 }
 
-.flakeObject svg g path, .flowerObject svg g path {
+.flowerTwoObject {
+    top: 200%;
+    left: 85%;
+}
+
+.flakeObject svg g path, .flowerObject svg g path, .flowerTwoObject svg g path {
     fill: var(--secondaryColor);
 }
 
 .pictureObject {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     position: relative;
 }
@@ -90,9 +93,9 @@
 .pictureObject img {
     padding: var(--s);
     border: calc(2 * var(--s)) solid transparent; /* Set to transparent for seamless frame */
-    outline: 1px solid black;
+    outline: 1.5px solid var(--secondaryColor);
     outline-offset: calc(-1 * var(--s));
-    background: conic-gradient(from 90deg at 1px 1px, #0000 25%, black 0);
+    background: conic-gradient(from 90deg at 1.5px 1.5px, #0000 25%, var(--secondaryColor) 0);
     width: 100%; /* Make it responsive */
     max-width: 400px; /* Control maximum size */
     height: auto; /* Ensure proper aspect ratio */
@@ -118,12 +121,12 @@
 
     .flakeObject {
         top: 25%;
-    }
+    } 
 
     .flowerObject {
-        top: 140%;
+        top: 180%;
         left: 0%;
-    }
+    } 
 }
 
 @media only screen and (max-width: 700px) {
@@ -133,7 +136,7 @@
         align-items: center;
     }
 
-    .aboutmeText, .coursesText {
+    .aboutmeText, .coursesText, .extraText{
         margin-left: 0;
         text-align: center;
         order: 2; /* Ensure text follows image */
@@ -147,71 +150,30 @@
         font-size: 16px;
     }
     .pictureObject {
-        max-width: 80%;
+        max-width: 60%;
         margin: 0 auto;
     }
 
+    .flakeObject, .flowerObject, .flowerTwoObject {
+        visibility: hidden;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 1919px) {
     .flakeObject {
+        left: 80%;
+        top: 0;
+    }
+
+    .flowerObject {
         left: 55%;
-        top: 20%;
+        top: 110%;
     }
 
-    .flowerObject {
-        left: 0%;
-        top: 160%;
-    }
-}
-
-@media only screen and (max-width: 749px){
-    .flakeObject {
+    .flowerTwoObject {
         left: 80%;
-        top: 50%;
-    }
-
-    .flowerObject {
-        left: 15%;
-        top: 245%;
-    }
-}
-
-@media only screen and (min-width: 750px) and (max-width: 762px) {
-    .flakeObject {
-        left: 80%;
-        top: 50%;
-    }
-
-    .flowerObject {
-        left: 80%;
-        top: 225%;
-    }
-}
-
-@media only screen and (min-width: 763px) and (max-width: 790px) {
-    .flakeObject {
-        left: 90%;
-        top: 90%;
-    }
-
-    .flowerObject {
-        left: 100%;
-        top: 225%;
-    }
-}
-
-/* Media queries for responsive design */
-@media only screen and (max-width: 1024px) {
-    .pictureObject {
-        max-width: 400px;
-    }
-
-    .flakeObject {
-        left: 55%;
-        top: 20%;
-    }
-
-    .flowerObject {
-        left: 0%;
-        top: 160%;
+        top: 290%;
     }
 }
 

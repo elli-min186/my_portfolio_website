@@ -11,6 +11,9 @@
 body {
     max-width: 100%;
 }
+html {
+    overflow-x: hidden;
+}
 section {
     display: none;
 }
@@ -31,7 +34,6 @@ section.active {
 .grid-item {
     align-items: center;
     padding: 5px;
-    display: relative;
     max-width: 100%;
 }
 .name {
