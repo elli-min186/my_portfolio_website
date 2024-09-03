@@ -1,0 +1,92 @@
+:root {
+    --primaryColor: #502EBC;
+    --secondaryColor: #2a107d;
+    --green: #556B2F;
+    --darkPurple: #3F0F6F;
+    --gold: #FFD700;
+    --lightViolet: #E4CCFF;
+}
+
+.workTitle h1 {
+    font-size: 4rem; /* Responsive scaling */
+    color: var(--darkPurple);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 1);
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px 60px;
+}
+
+.workTitle p {
+    font-size: 20px;
+    margin-left: 70px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 1);
+    color: var(--secondaryColor);
+}
+
+.flex-container.work {
+    position: relative;
+    margin-top: 100px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    width: 100%;
+}
+
+.timeline {
+    position: relative;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #333; /* Color of the vertical line */
+  }
+  
+  .timeline-event {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .timeline-event:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: #333; /* Color of the dots */
+    border-radius: 50%;
+    margin-left: -6px;
+    top: 0;
+  }
+  
+  .timeline-content {
+    padding: 0 20px;
+    position: relative;
+    width: 45%;
+    background: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .timeline-event:nth-child(odd) .timeline-content {
+    left: 50%;
+  }
+  
+  .timeline-event:nth-child(even) .timeline-content {
+    left: 0;
+  }
+  
