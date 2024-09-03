@@ -4,9 +4,13 @@ Welcome to my personal portfolio website! This project showcases my skills and p
 ## Introduction
 This is a personal portfolio website designed and developed with a focus on advanced CSS techniques, responsiveness, UI/UX concepts, and a visually appealing design. The website incorporates animations, keyframes, a navbar with transitions, a gradient live background, and a hamburger menu bar for enhanced user experience.
 
+## Getting Started
+To view the website, simply open the [website](https://elli-min186.github.io/my_portfolio_website) in a web browser. The website is designed to be compatible with modern web browsers.
+
 ## Technologies Used
 - HTML5
 - CSS3 (Advanced techniques, Animations, Keyframes, Transitions)
+- SCSS
 - JavaScript (Switching between different pages)
 - Bootstrap Framework
 - Adobe Illustrator (for designing the logo and favicon)
@@ -30,8 +34,5 @@ This is a personal portfolio website designed and developed with a focus on adva
 
 ### Hamburger Menu Bar
 - A sleek and functional hamburger menu bar for easy navigation on smaller screens.
-
-## Getting Started
-To view the website, simply open the [website](https://elli-min186.github.io/my_portfolio_website) in a web browser. The website is designed to be compatible with modern web browsers.
 
 *Enjoy exploring my portfolio!*
