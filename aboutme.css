@@ -7,7 +7,7 @@
     --s: 10px;
 }
 
-.flex-container {
+.flex-container.aboutme, .flex-container.courses{
     position: relative;
     margin-top: 100px;
     margin-bottom: 40px;

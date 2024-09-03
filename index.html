@@ -22,13 +22,14 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <link rel="stylesheet" href="bgstyle.css">
     <link rel="stylesheet" href="headerstyle.css">
     <link rel="stylesheet" href="body.css">
     <link rel="stylesheet" href="aboutme.css">
+    <link rel="stylesheet" href="projects.css">
     <script src="pageSelector.js"></script>
 </head>
 
@@ -76,11 +77,11 @@
                 </div>
                 <div class="grid-item contactInfo">
                     <div>
-                        <a href="https://github.com/elli-min186" target="blank"><img src="images/github.png"
+                        <a href="https://github.com/elli-min186" target="blank"><img src="images/github.jpg"
                                 alt="github logo" /></a>
                     </div>
                     <div>
-                        <a href="https://www.linkedin.com/in/elli-min/" target="blank"><img src="images/linkedin.png"
+                        <a href="https://www.linkedin.com/in/elli-min/" target="blank"><img src="images/linkedin.jpg"
                                 alt="linkedin logo" /></a>
                     </div>
                     <div>
@@ -112,7 +113,7 @@
                             <li><b>Programming Languages</b>: Java, Python, HTML/CSS, JavaScript, Smalltalk, Rust, C,
                                 PHP, MySQL</li>
                             <li><b>Operating Systems & Tools</b>: Linux/Unix, bash scripting, Visual Studio Code</li>
-                            <li><b>Design & Prototyping</b>: Figma</li>
+                            <li><b>Design & Prototyping</b>: Figma, Adobe Illustrator</li>
                             <li><b>Productivity Tools</b>: Google Suite, Adobe Creative Suite</li>
                         </ul>
                             <p> I’m currently seeking co-op opportunities to gain hands-on experience and further develop my skills in 
@@ -220,7 +221,7 @@
             </div>
         </section>
 
-        <!-- <section id="projects">
+        <section id="projects">
             <div class="flex-container projects">
                 <div class="projectsTitle">
                     <h1>Project</h1>
@@ -230,17 +231,129 @@
                     <div class="grid-items Title">
                         <h1>Coding</h1>
                     </div>
-                    <div class="grid-items Body">
-                        
+                    <div class="grid-items BodyContainer">
+                        <div class="row">
 
+                            <div class="col-md-4 border-rounded shadow-sm p-3 mb-5 bg-body rounded">
+                                <div class="text-center">
+                                    <img class="projectImages" src="images/SpaceRacer.jpg" alt="Space Race"/>
+                                    <h2 class="pt-3 custom-h2">Space Racer</h2>
+                                    <p class="Description">
+                                        Space Racer is a 2D game developed in Java using the Swing library. The game features spaceships, balls, 
+                                        and various screens for title, mode selection, gameplay, and ending screens. Players can choose between 
+                                        time-based or score-based gameplay.
+                                    </p>
+                                    <button onclick="window.open('https://github.com/elli-min186/Space_Race_Java', '_blank');" class="button">Github</button>
+                                </div>
+                            </div>
 
+                            <div class="col-md-4 border-rounded shadow-sm p-3 mb-5 bg-body rounded">
+                                <div class="text-center">
+                                    <img class="projectImages" src="images/PongGame.jpg" alt="Pong Game"/>
+                                    <h2 class="pt-3 custom-h2">Pong Game</h2>
+                                    <p class="Description">
+                                        This is a simple Pong game implemented using HTML, CSS, and JavaScript. The game features two paddles, a
+                                        ball, and a scoring system. Players can control the paddles using designated keys and aim to score points by
+                                        hitting the ball past their opponent's paddle. UtilizedEaselJS: Library for working with the HTML5 canvas.
+                                    </p>
+                                    <button onclick="window.open('https://github.com/elli-min186/pong', '_blank');" class="button">Github</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 border-rounded shadow-sm p-3 mb-5 bg-body rounded">
+                                <div class="text-center">
+                                    <img class="projectImages" src="images/Website.jpg" alt="Website"/>
+                                    <h2 class="pt-3 custom-h2">Personal Website</h2>
+                                    <p class="Description">
+                                        This is a personal portfolio website designed and developed with a focus on advanced CSS techniques,
+                                        responsiveness, UI/UX concepts, and a visually appealing design. The website incorporates animations,
+                                        keyframes, a navbar with transitions, a gradient live background, and a hamburger menu bar for enhanced user
+                                        experience.
+                                    </p>
+                                    <button onclick="window.open('https://github.com/elli-min186/my_portfolio_website', '_blank');" class="button">Github</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-4 border-rounded shadow-sm p-3 mb-5 bg-body rounded">
+                                <div class="text-center">
+                                    <img class="projectImages" src="images/NumberGuessing.jpg" alt="Number Guessing"/>
+                                    <h2 class="pt-3 custom-h2">Number Guessing Game</h2>
+                                    <p class="Description">
+                                        This is a simple console-based Python program that allows users to play a guessing game. The program generates
+                                        a random number, and the user has to guess the correct number within a limited number of attempts. There are
+                                        three difficulty levels: Easy, Medium, and Hard, each with a different range of numbers.
+                                    </p>
+                                    <button onclick="window.open('https://github.com/elli-min186/Number_Guessing_Game', '_blank');" class="button">Github</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 border-rounded shadow-sm p-3 mb-5 bg-body rounded">
+                                <div class="text-center">
+                                    <img class="projectImages" src="images/Hangman.jpg" alt="Hangman"/>
+                                    <h2 class="pt-3 custom-h2">Hangman Game</h2>
+                                    <p class="Description">
+                                        In the Hangman Game, you find yourself in a life-or-death situation, kidnapped by your enemy. Your only chance of
+                                        survival is to guess a randomly selected word. For each incorrect guess, you move one step closer to your demise.
+                                        Can you guess the word in time and secure your freedom?
+                                    </p>
+                                    <button onclick="window.open('https://github.com/elli-min186/Hangman', '_blank');" class="button">Github</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="designProjects">
+                    <div class="grid-items Title">
+                        <h1>Design</h1>
+                    </div>
+                    <div class="grid-items BodyContainer">
+                        <div class="row">
+
+                            <div class="col-md-4 border-rounded shadow-sm p-3 mb-5 bg-body rounded">
+                                <div class="text-center">
+                                    <img class="projectImages" src="images/pacsLogo.jpg" alt="PACS Logo"/>
+                                    <h2 class="pt-3 custom-h2">PACS Logo</h2>
+                                    <p class="Description">
+                                        Logo Design for a student club known as PACS
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 border-rounded shadow-sm p-3 mb-5 bg-body rounded">
+                                <div class="text-center">
+                                    <img class="projectImages" src="images/Chinese Logo.jpg" alt="Chinese Logo"/>
+                                    <h2 class="pt-3 custom-h2">Chinese Department Logo</h2>
+                                    <p class="Description">
+                                        Logo Design for Chinese Department at Run Free Education Myanmar
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 border-rounded shadow-sm p-3 mb-5 bg-body rounded">
+                                <div class="text-center">
+                                    <img class="projectImages" src="images/SpaceRace logo.jpg" alt="Space Race Logo"/>
+                                    <h2 class="pt-3 custom-h2">Space Race Logo</h2>
+                                    <p class="Description">
+                                        Logo Design for personal project game called Space Race
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="andManyMore"> And many more small projects...!</p>
                     </div>
                 </div>
             </div>
-        </section> -->
+
+        </section>
 
     </main>
-    <footer>
+    <footer id="footer">
         <p>&copy; 2024 Elli Min All rights reserved.</p>
     </footer>
 </body>
