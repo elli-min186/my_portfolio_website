@@ -8,14 +8,15 @@
 }
 
 .flex-container {
+    position: relative;
     margin-top: 100px;
     margin-bottom: 40px;
+    margin-right: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
     width: 100%;
-    margin-left: 30px;
 }
 
 .aboutmeText, .coursesText, .extraText {
@@ -35,7 +36,7 @@
 }
 
 .Title, .Body {
-    margin: 10px 50px; /* Consistent margin */
+    margin: 10px 20px; /* Consistent margin */
 }
 
 .Title {
@@ -59,24 +60,23 @@
 .flakeObject, .flowerObject, .flowerTwoObject {
     animation: rotateObject 5s linear infinite;
     position: absolute;
-    transform: translateX(-50%);
     z-index: 10;
     opacity: 0.1;
 }
 
 .flakeObject {
     top: 0;
-    left: 85%;
+    left: 65%;
 }
 
 .flowerObject {
-    top: 130%;
+    top: 0;
     left: 65%;
 }
 
 .flowerTwoObject {
-    top: 200%;
-    left: 85%;
+    top: 0;
+    left: 65%;
 }
 
 .flakeObject svg g path, .flowerObject svg g path, .flowerTwoObject svg g path {
@@ -84,10 +84,10 @@
 }
 
 .pictureObject {
-    width: 100%;
+    width: 100vw;
     max-width: 400px;
-    margin: 0 auto;
-    position: relative;
+    justify-content: center;
+    margin: 0 20px;
 }
 
 .pictureObject img {
@@ -107,32 +107,44 @@
 }
 
 @media only screen and (max-width: 480px) {
+    .flex-container {
+        flex-direction: column;
+        margin: 10px 0;
+        padding: 0;
+        justify-content: center;
+    }
+    
     .Title h1 {
         font-size: 2rem;
     }
 
     .Body {
         font-size: 14px;
+        padding: 0;
     }
 
     .pictureObject {
-        max-width: 70%;
+        max-width: 50%;
+        margin: 20px 0;
+        order: 1;
     }
 
-    .flakeObject {
-        top: 25%;
-    } 
+    .aboutmeText, .coursesText, .extraText {
+        margin: 0;
+        order: 2;
+    }
 
-    .flowerObject {
-        top: 180%;
-        left: 0%;
-    } 
+    .flakeObject, .flowerObject, .flowerTwoObject {
+        visibility: hidden;
+        display: none;
+    }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 481px) and (max-width: 700px) {
     .flex-container {
         flex-direction: column;
-        margin-top: 50px;
+        margin: 10px 0;
+        padding: 0;
         align-items: center;
     }
 
@@ -155,31 +167,52 @@
     }
 
     .flakeObject, .flowerObject, .flowerTwoObject {
-        visibility: hidden;
+        display: none;
         overflow: hidden;
     }
 }
 
-@media only screen and (max-width: 1919px) {
+@media only screen and (min-width: 701px) and (max-width: 1500px) {
+
+    .flex-container {
+        justify-content: center;
+    }
+
     .flakeObject {
-        left: 80%;
+        left: 65%;
         top: 0;
     }
 
     .flowerObject {
-        left: 55%;
-        top: 110%;
+        top: 70%;
+        left: 65%;
     }
 
     .flowerTwoObject {
-        left: 80%;
-        top: 290%;
+        left: 65%;
+        top: 0;
     }
 }
 
-/* Larger screens */
-@media (min-width: 1024px) {
-    .pictureObject {
-        max-width: 600px;
+@media only screen and (min-width: 1800px) and (max-width: 1919px) {
+
+    .flex-container {
+        justify-content: center;
+    }
+
+    .flakeObject {
+        left: 75%;
+        top: 0;
+    }
+
+    .flowerObject {
+        left: 75%;
+        top: 65%;
+    }
+
+    .flowerTwoObject {
+        left: 75%;
+        top: 0;
     }
 }
+
