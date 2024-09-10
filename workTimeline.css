@@ -40,16 +40,24 @@
 .timeline-event:hover .timeline-event-thumbnail {
   box-shadow: inset 40em 0 0 0 #556B2F;
 }
+.timeline-event::marker {
+  color: transparent;
+}
 
 .timeline-event-copy {
   padding: 2em;
+  padding-left: 0;
   position: relative;
   top: -1.875em;
   left: 4em;
   width: 80%;
 }
+.timeline-event-copy p {
+  font-family: "Lato", sans-serif;
+}
 .timeline-event-copy h3 {
   font-size: 1.75em;
+  font-family: "Lato", sans-serif;
 }
 .timeline-event-copy h4 {
   font-size: 1.2em;
@@ -57,6 +65,22 @@
 }
 .timeline-event-copy p:not(.timeline-event-thumbnail) {
   padding-bottom: 1.2em;
+  font-family: "Lato", sans-serif;
+}
+@media (max-width: 351px) {
+  .timeline-event-copy {
+    padding-left: 7px;
+    left: 20px;
+  }
+  .timeline-event-copy h3 {
+    font-size: 1em;
+  }
+  .timeline-event-copy h4 {
+    font-size: 0.75em;
+  }
+  .timeline-event-copy p {
+    font-size: 0.75em;
+  }
 }
 
 .timeline-event-icon {
@@ -68,7 +92,7 @@
   margin: 0.5em 0.5em 0.5em -0.5em;
   position: absolute;
   top: 0;
-  left: 2em;
+  left: 0;
   width: 1em;
   height: 1em;
 }
@@ -77,6 +101,7 @@
   transition: box-shadow 0.5s ease-in 0.1s;
   color: white;
   font-size: 0.75em;
+  font-family: "Lato", sans-serif;
   background-color: #3F0F6F;
   box-shadow: inset 0 0 0 0em #ef795a;
   display: inline-block;

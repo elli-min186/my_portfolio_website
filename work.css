@@ -8,7 +8,7 @@
 }
 
 .workTitle h1 {
-    font-size: 4rem; /* Responsive scaling */
+    font-size: 3rem; /* Responsive scaling */
     color: var(--darkPurple);
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 1);
     font-family: "Alice", serif;
@@ -18,10 +18,11 @@
 }
 
 .workTitle p {
-    font-size: 20px;
+    font-size: 1rem;
     margin-left: 70px;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 1);
     color: var(--secondaryColor);
+    font-family: "Lato", sans-serif;
 }
 
 .flex-container.work {
@@ -34,59 +35,32 @@
     width: 100%;
 }
 
-.timeline {
-    position: relative;
-    margin: 20px 0;
+@media (max-width: 480px) {
+  .workTitle h1 {
+    margin: 0;
     padding: 0;
-    list-style: none;
+    padding-bottom: 4px;
+    text-align: center;
+    font-size: 2em;
   }
   
-  .timeline:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    background: #333; /* Color of the vertical line */
+  .workTitle p {
+    margin: 5px;
+    padding: 0;
+    text-align: center;
   }
-  
-  .timeline-event {
-    position: relative;
-    margin-bottom: 30px;
+}
+
+@media (max-width: 351px) {
+  .workTitle h1 {
+    font-size: 1.3em;
   }
-  
-  .timeline-event:after {
-    content: '';
-    display: table;
-    clear: both;
+
+  .workTitle p {
+    font-size: 0.75em;
   }
-  
-  .timeline-dot {
-    position: absolute;
-    left: 50%;
-    width: 12px;
-    height: 12px;
-    background: #333; /* Color of the dots */
-    border-radius: 50%;
-    margin-left: -6px;
-    top: 0;
+
+  .flex-container.work {
+    margin-right: 0;
   }
-  
-  .timeline-content {
-    padding: 0 20px;
-    position: relative;
-    width: 45%;
-    background: #f5f5f5;
-    border-radius: 4px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  }
-  
-  .timeline-event:nth-child(odd) .timeline-content {
-    left: 50%;
-  }
-  
-  .timeline-event:nth-child(even) .timeline-content {
-    left: 0;
-  }
-  
+}
